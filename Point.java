@@ -17,22 +17,18 @@ public class Point implements Comparable{
            If the math is a problem, use a simpler
            relationship, like "higher is bigger"
            and change the tests accordingly */
-       if (otherObj instanceof Point){
-         Point other = (Point) otherObj;
-         double distFromCenter0 = Math.pow(xcor * xcor + ycor * ycor, 0.5);
-         double distFromCenter1 = Math.pow(other.xcor * other.xcor + other.ycor * other.ycor, 0.5);
-         if (distFromCenter0 > distFromCenter1){
-           return 1;
-         }if (distFromCenter0 == distFromCenter1){
-           return 0;
-         }else{
-           return -1;
-         }
-         // return (int)(distFromCenter0 - distFromCenter1);
-       }
-       else{
+       Point other = (Point) otherObj;
+       double distFromCenter0 = Math.pow(xcor * xcor + ycor * ycor, 0.5);
+       double distFromCenter1 = Math.pow(other.xcor * other.xcor + other.ycor * other.ycor, 0.5);
+       if (distFromCenter0 > distFromCenter1){
+         return 1;
+       }if (distFromCenter0 == distFromCenter1){
          return 0;
+       }else{
+         return -1;
        }
+       // return (int)(distFromCenter0 - distFromCenter1);
+
     }
 
     // -------- previously-written code ----------

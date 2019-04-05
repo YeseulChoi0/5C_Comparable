@@ -22,19 +22,16 @@ public class Date implements Comparable{
     }
 
     public int compareTo(Object otherObj){
-      if (otherObj instanceof Date){
-        Date other = (Date) otherObj;
-        int totalDays0 = ((y * 12) + m) * 30 + d;
-        int totalDays1 = ((other.y * 12) + other.m) * 30 + other.d;
-        if (totalDays0 > totalDays1){
-          return 1;
-        }if (totalDays0 == totalDays1){
-          return 0;
-        }else{
-          return -1;
-        }
+      Date other = (Date) otherObj;
+      int totalDays0 = ((y * 12) + m) * 30 + d;
+      int totalDays1 = ((other.y * 12) + other.m) * 30 + other.d;
+      if (totalDays0 > totalDays1){
+        return 1;
+      }if (totalDays0 == totalDays1){
+        return 0;
+      }else{
+        return -1;
       }
-      return 0;
     }
 
 
