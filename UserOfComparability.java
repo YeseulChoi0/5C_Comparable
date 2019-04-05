@@ -5,6 +5,7 @@
 public class UserOfComparability {
 
     public static void main(String[] commandLine) {
+      //hello
         System.out.println( System.lineSeparator()
                           + "Point comparisons");
 
